@@ -4,8 +4,6 @@ const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 const colors = require('colors');
 
-const ApiError = require('./exeptions/apiErrors');
-
 const errorMiddleware = require('./middleware/error.middleware');
 
 const connectDB = require('./db/connectDB');
