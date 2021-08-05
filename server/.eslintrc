@@ -2,7 +2,6 @@
 	"env": {
 		"browser": true,
 		"es2021": true,
-		"es6": true,
 		"node": true
   },
 	"parser": "babel-eslint",
@@ -10,7 +9,6 @@
 			"ecmaVersion": 6,
 			"sourceType": "module",
 			"ecmaFeatures": {
-					"jsx": true,
 					"modules": true,
 					"experimentalObjectRestSpread": true
 			}
