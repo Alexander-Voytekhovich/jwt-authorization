@@ -1,15 +1,15 @@
 import { AxiosResponse } from 'axios';
 
-import api from '../http';
-import { AuthResponse } from '../models/response/AuthResponse';
+import api from '../api';
+import { IAuthResponse } from '../interfaces/response/IAuthResponse';
 
 export default class AuthService {
-  static async login(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
-    return api.post<AuthResponse>('/login', { email, password });
+  static async login(email: string, password: string): Promise<AxiosResponse<IAuthResponse>> {
+    return api.post<IAuthResponse>('/login', { email, password });
   }
 
-  static async registration(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
-    return api.post<AuthResponse>('/registration', { email, password });
+  static async registration(email: string, password: string): Promise<AxiosResponse<IAuthResponse>> {
+    return api.post<IAuthResponse>('/registration', { email, password });
   }
 
   static async logout(): Promise<void> {
